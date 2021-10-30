@@ -1,0 +1,54 @@
+.book-form {
+    width: 100%;
+}
+.book-form .input {
+    width: 100%;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.075);
+}
+.book-form .input label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.book-form .input input:not([type=submit]):not([type=checkbox]), .book-form .input select {
+    width: 100%;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    height: 38px;
+    padding: 0 10px;
+    transition: border 0.5s;
+}
+.book-form .input input:not([type=submit]):not([type=checkbox]):focus, .book-form .input select:focus {
+    outline: 0;
+    border-bottom-color: dodgerblue;
+}
+.book-form .input .preview {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.book-form .input .preview span {
+    font-weight: normal;
+    display: inline-block;
+    margin-right: 10px;
+}
+.book-form .input.action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 0;
+    padding-right: 0;
+    border: none;
+}
+.book-form .input.action .input {
+    width: unset;
+    border: none;
+    padding: 0;
+}
+.book-form .input.action span,
+.book-form .input.action input {
+    cursor: pointer;
+}

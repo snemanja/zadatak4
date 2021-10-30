@@ -1,0 +1,111 @@
+.cards {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-content: flex-start;
+  flex-wrap: wrap;
+}
+.cards .card {
+  position: relative;
+  width: 20%;
+  padding: 10px;
+}
+.cards .card::after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+.cards .card .content {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  overflow: hidden;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 2px 2px 15px -10px rgba(0, 0, 0, 0);
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.075);
+  transition: box-shadow 0.5s;
+}
+.cards .card .content .title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+}
+.cards .card .content .title p {
+  padding: 0 0 10px 0;
+  margin: 0;
+}
+.cards .card .content .title p.book-title {
+  font-weight: bold;
+}
+.cards .card .content .title p.book-year {
+  opacity: 0.55;
+  font-style: italic;
+}
+.cards .card .content .footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.cards .card .content .footer .rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  text-align: left;
+}
+.cards .card .content .footer .rating > span {
+  display: inline-block;
+  position: relative;
+  width: 1.1em;
+}
+.cards .card .content .footer .rating > span:hover,
+.cards .card .content .footer .rating > span:hover ~ span {
+  color: transparent;
+}
+.cards .card .content .footer .rating > span:hover:before,
+.cards .card .content .footer .rating > span:hover ~ span:before {
+  content: "★";
+  position: relative;
+  left: -3px;
+  color: red;
+}
+.cards .card .content:hover {
+  box-shadow: 2px 2px 15px -10px black;
+}
+.cards .card .content .footer .action {
+  display: flex;
+  align-items: stretch;
+}
+.cards .card .content .footer button {
+  cursor: pointer;
+  margin-left: 10px;
+}
+@media (max-width: 1400px) {
+  .cards .card {
+    width: 25%;
+  }
+}
+@media (max-width: 992px) {
+  .cards .card {
+    width: 33.33%;
+  }
+}
+@media (max-width: 860px) {
+  .cards .card {
+    width: 50%;
+  }
+}
+@media (max-width: 640px) {
+  .cards .card {
+    width: 100%;
+  }
+}

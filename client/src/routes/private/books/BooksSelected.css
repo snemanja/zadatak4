@@ -1,0 +1,98 @@
+.books-selected {
+    position: fixed;
+    width: calc(100% - 220px);
+    height: calc(100% - 46px);
+    top: 46px;
+    left: 220px;
+}
+.books-selected .background {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: -moz-linear-gradient(left,  rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.15) 100%);
+    background: -webkit-linear-gradient(left,  rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.15) 100%);
+    background: linear-gradient(to right,  rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.15) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66000000', endColorstr='#26000000',GradientType=1 );
+    opacity: 0;
+    cursor: pointer;
+    transition: all .5s;
+}
+.books-selected .inner {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 0;
+    height: 85%;
+    width: 100%;
+    max-width: 800px;
+    overflow-y: scroll;
+    background-color: #fff;
+    padding: 10px;
+    transform: translate(-100%, -50%);
+    transition: all .5s;
+}
+.books-selected .books-related h4 {
+    margin-bottom: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, .15);
+}
+.books-selected .books-related .card {
+    width: 25%;
+    padding: 5px;
+}
+.books-selected .books-related .card p {
+    font-size: 12px;
+}
+.books-selected .books-related .card .content {
+    padding: 5px;
+    top: 5px;
+    left: 5px;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+}
+.books-selected .books-related .card .content .footer .rating > span {
+    width: .7em;
+}
+.books-selected .books-related .card .content .footer .rating > span:hover:before,
+.books-selected .books-related .card .content .footer .rating > span:hover ~ span:before {
+    left: -1px;
+}
+.books-selected.viewing .background {
+    opacity: 1;
+}
+.books-selected.viewing .inner {
+    transform: translate(0, -50%);
+}
+.books-selected .inner .book-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.books-selected .inner .book-details div {
+    width: 50%;
+    padding: 10px 10px 0 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, .075);
+}
+.books-selected .inner .book-details div:nth-child(1),
+.books-selected .inner .book-details div:nth-child(3),
+.books-selected .inner .book-details div:nth-child(5),
+.books-selected .inner .book-details div:nth-child(7) {
+    border-right: 1px solid rgba(0, 0, 0, .075);
+}
+.books-selected .inner .book-details div p {
+    font-size: 14px;
+    padding: 0 0 10px 0;
+    margin: 0;
+}
+.books-selected .inner .book-action button {
+    cursor: pointer;
+}
+@media screen and (max-width: 1024px) {
+    .books-selected .books-related .card {
+        width: 33.33%;
+    }
+}

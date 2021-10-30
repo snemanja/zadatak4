@@ -1,0 +1,63 @@
+.cards-navigation {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.075);
+    background-color: #fff;
+}
+.cards-navigation .pagination button {
+    cursor: pointer;
+}
+.cards-navigation .pagination button:disabled {
+    cursor: not-allowed;
+}
+.cards-navigation .pagination button.next {
+    margin-left: 10px;
+}
+.cards-navigation .pagination button.prev {
+    margin-right: 10px;
+}
+.cards-navigation .per-page {
+    margin-right: auto;
+    margin-left: 10px;
+}
+.cards-navigation .per-page select {
+    min-width: 100px;
+    height: 28px;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.075);
+    transition: border 0.5s;
+}
+.cards-navigation .per-page select:focus {
+    outline: 0;
+    border-bottom-color: dodgerblue;
+}
+.cards-navigation .search-wrap {
+    display: flex;
+    align-items: center;
+}
+.cards-navigation .search-wrap .search {
+    width: 100%;
+    max-width: 250px;
+}
+.cards-navigation .search-wrap span {
+    font-size: 14px;
+    padding: 5px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+.cards-navigation .search-wrap input:not([type=submit]), .cards-navigation .search-wrap select {
+    width: 100%;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    height: 28px;
+    padding: 0 10px;
+    transition: border 0.5s;
+}
+.cards-navigation .search-wrap input:not([type=submit]):focus, .cards-navigation .search-wrap select:focus {
+    outline: 0;
+    border-bottom-color: dodgerblue;
+}
